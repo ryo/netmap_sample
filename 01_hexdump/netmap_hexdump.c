@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <poll.h>
 #include <libutil.h>
 #define NETMAP_WITH_LIBS
