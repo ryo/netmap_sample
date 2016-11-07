@@ -5,7 +5,6 @@
 #include <net/netmap_user.h>
 
 struct nm_desc *nm_desc;
-struct nmreq nmreq;
 
 int
 main(int argc, char *argv[])
@@ -14,7 +13,7 @@ main(int argc, char *argv[])
 	struct netmap_ring *rxring;
 	struct pollfd pollfd[1];
 
-	nm_desc = nm_open("netmap:igb0", &nmreq, 0, NULL);
+	nm_desc = nm_open("netmap:igb2", NULL, 0, NULL);
 	for (;;) {
 		pollfd[0].fd = nm_desc->fd;
 		pollfd[0].events = POLLIN;
