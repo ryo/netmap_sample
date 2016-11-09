@@ -51,7 +51,7 @@ int
 main(int argc, char *argv[])
 {
 	unsigned int cur, n, i, is_hostring;
-	struct netmap_ring *rxring, *txring;
+	struct netmap_ring *rxring;
 	struct pollfd pollfd[1];
 
 	/* "igb2*" - open NIC-ring and SW-ring */
